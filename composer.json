@@ -1,0 +1,15 @@
+{
+  "name": "luketowers/oc-laravelpackagesexample-plugin",
+  "type": "october-plugin",
+  "description": "OctoberCMS plugin for demonstrating the use of Laravel Packages within October plugins",
+  "homepage": "https://github.com/LukeTowers/oc-laravelpackagesexample-plugin",
+  "authors": [
+    {
+      "name": "Luke Towers",
+      "email": "octobercms@luketowers.ca"
+    }
+  ],
+  "require": {
+    "mews/purifier": "~2.0"
+  }
+}
