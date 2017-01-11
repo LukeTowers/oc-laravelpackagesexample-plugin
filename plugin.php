@@ -55,12 +55,7 @@ class Plugin extends PluginBase
         foreach ($packages as $name => $options) {
             // Setup the configuration for the package, pulling from this plugin's config
             if (!empty($options['config'] && !empty($options['config_namespace']))) {
-                $configKeys = array_keys(array_dot($options['config']));
-                
-                // Set each config key under the package config namespace
-                foreach ($configKeys as $key) {
-                    Config::set($options['config_namespace'] . '.' . $key, array_get($options['config'], $key));
-                }
+                Config::set($options['config_namespace'], $options['config']);
             }
             
             // Register any Service Providers for the package
