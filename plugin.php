@@ -54,7 +54,7 @@ class Plugin extends PluginBase
         // Boot each package
         foreach ($packages as $name => $options) {
             // Setup the configuration for the package, pulling from this plugin's config
-            if (!empty($options['config'] && !empty($options['config_namespace']))) {
+            if (!empty($options['config']) && !empty($options['config_namespace'])) {
                 Config::set($options['config_namespace'], $options['config']);
             }
             
